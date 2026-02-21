@@ -1,4 +1,4 @@
-export function getAvatar(name: string, image?: string): string {
+export function getAvatar(name?: string, image?: string): string {
   // Only use image if it's a valid uploaded image (not a Clerk placeholder)
   if (image && !image.includes('img.clerk.com')) return image;
   
