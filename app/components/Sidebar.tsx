@@ -239,7 +239,7 @@ export default function Sidebar({ selectedConversationId, onSelectConversation, 
       {showPhotoUpload && (
         <ProfilePhotoUpload
           currentImage={currentUser?.image}
-          userName={currentUser?.name || user?.fullName || user?.username}
+          userName={currentUser?.name || user?.fullName || user?.username || undefined}
           onClose={() => setShowPhotoUpload(false)}
         />
       )}
