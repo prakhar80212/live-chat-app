@@ -27,7 +27,7 @@ export default function ChatArea({ conversationId, onBack }: ChatAreaProps) {
   const messagesContainerRef = useRef<HTMLDivElement>(null);
   const emojiPickerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const typingTimeoutRef = useRef<NodeJS.Timeout>();
+  const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   
   const messages = useQuery(api.messages.getMessages, { conversationId });
   const sendMessage = useMutation(api.messages.sendMessage);
