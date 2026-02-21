@@ -245,7 +245,7 @@ export default function ChatArea({ conversationId, onBack }: ChatAreaProps) {
                 key={msg._id}
                 message={msg}
                 isOwn={isOwn}
-                showAvatar={showAvatar || isGroup}
+                showAvatar={!!(showAvatar || isGroup)}
                 senderImage={sender?.image}
                 senderName={sender?.name}
                 currentUserId={user?.id || ""}
