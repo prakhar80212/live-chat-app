@@ -164,7 +164,7 @@ export default function Sidebar({ selectedConversationId, onSelectConversation, 
           <div className="flex items-center gap-4 flex-1 min-w-0">
             <div className="relative">
               <img
-                src={getAvatar(currentUser?.name || user?.fullName || user?.username, currentUser?.image)}
+                src={getAvatar(currentUser?.name || user?.fullName || user?.username || undefined, currentUser?.image)}
                 alt={user?.fullName || user?.username || "User"}
                 className="w-12 h-12 rounded-xl object-cover ring-2 ring-gray-200 shadow-lg cursor-pointer hover:ring-gray-300 transition-all"
                 onClick={() => setShowMenu(!showMenu)}
